@@ -20,7 +20,10 @@
 </form>
 
 <div class="ui grid posts">
-  <app-article></app-article>
+  <app-article
+    *ngFor="let listArticle of sortedArticles()"
+    [article]="listArticle"
+  ></app-article>
 </div>
 
 <router-outlet></router-outlet>
